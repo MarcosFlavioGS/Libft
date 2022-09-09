@@ -6,11 +6,11 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 00:14:10 by coder             #+#    #+#             */
-/*   Updated: 2022/09/08 00:24:21 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/09 02:00:49 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
