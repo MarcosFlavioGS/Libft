@@ -6,11 +6,9 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 23:33:31 by coder             #+#    #+#             */
-/*   Updated: 2022/09/13 01:22:26 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/14 22:19:35 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

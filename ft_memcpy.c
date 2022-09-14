@@ -6,9 +6,10 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 01:51:19 by coder             #+#    #+#             */
-/*   Updated: 2022/09/06 23:10:59 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/14 22:11:50 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

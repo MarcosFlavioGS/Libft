@@ -6,11 +6,10 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 01:25:34 by coder             #+#    #+#             */
-/*   Updated: 2022/09/14 21:08:01 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/14 22:21:05 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdlib.h>
 
 static int	is_space(char c, char const *set)
 {
