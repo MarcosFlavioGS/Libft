@@ -6,13 +6,13 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 22:24:25 by coder             #+#    #+#             */
-/*   Updated: 2022/09/14 22:44:57 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/14 23:25:38 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
-# define MAX_SIZE 2147483647
+# define MAX_SIZE = 2147483647
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -50,4 +50,5 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int argument);
 int		ft_toupper(int argument);
+
 #endif
