@@ -5,66 +5,69 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 01:42:03 by coder             #+#    #+#             */
-/*   Updated: 2022/09/14 02:38:41 by coder            ###   ########.fr       */
+/*   Created: 2022/09/14 20:25:35 by coder             #+#    #+#             */
+/*   Updated: 2022/09/14 20:52:05 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-static void	ft_swap(char *a, char *b)
+static void	ft_rev_swap(char *s, int len)
 {
-	char	temp;
+	int		i;
+	int		j;
+	char	tmp;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-static void	ft_reverse(char str[], int len)
-{
-	int	i;
-	int	j;
+	i = 0;
+	j = len - 1;
 	while (i < j)
 	{
-		ft_swap((str + i), (str + j));
-		i++;
-		j--;
+		if (s[i] != '-' && s[j] != '-')
+		{
+			tmp = s[i];
+			s[i] = s[j];
+			s[j] = tmp;
+			i++;
+			j--;
+		}
+		else
+			i++;
 	}
+}
+
+static int	mod_numlen(int num)
+{
+	int	count;
+
+	count = 0;
+	while (num != 0)
+	{
+		num = num / 10;
+		count++;
+	}
+	return (count);
 }
 
 char	*ft_itoa(int n)
 {
-	size_t		i;
-	long int	rem;
-	int			sign;
-	char		*str;
+	int		i;
+	int		temp;
+	int		count;
+	char	*str;
 
+	temp = n;
+	count = mod_numlen(temp);
+	str = (char *) malloc(sizeof(char) * (count + 1));
 	i = 0;
-	sign = 0;
-	if (n == 0)
-		str[i++] = '0';
-		str[i] = '\0';
-		return (str);
 	if (n < 0)
-		sign = 1;
-		n *= -1;
+		str[i] = '-';
+		i++;
+		n = n * -1;
 	while (n != 0)
 	{
-		rem = n % 10;
-		str[i++] = rem + '0';
+		str[i] = n % 10 + '0';
 		n = n / 10;
+		i++;
 	}
-	if (sign)
-		str[i++] = '-';
 	str[i] = '\0';
-	ft_reverse(str, i);
+	ft_rev_swap(str, i);
 	return (str);
-}
-
-int	main(void)
-{
-	int n = 4564;
-
-	printf("%s\n", ft_itoa(n));
-	return (0);
 }
