@@ -6,15 +6,16 @@
 #    By: coder <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/10 01:57:11 by coder             #+#    #+#              #
-#    Updated: 2022/09/14 23:15:37 by coder            ###   ########.fr        #
+#    Updated: 2022/09/16 00:26:58 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 SRCS = ft_atoi.c		\
+	   ft_bzero.c		\
 	   ft_calloc.c		\
-	   ft_isalnum		\
+	   ft_isalnum.c		\
 	   ft_isalpha.c 	\
 	   ft_isascii.c 	\
 	   ft_isdigit.c 	\
@@ -81,7 +82,7 @@ OBJS = ft_atoi.o       \
 	   ft_tolower.o    \
 	   ft_toupper.o
 
-FLAGS = Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
@@ -89,7 +90,7 @@ $(NAME): $(OBJS)
 		   ar -rc $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
-		   cc $(FLAGS) -I $(PATH_INCL) -c $(SRCS)
+		   gcc $(FLAGS) -c $(SRCS)
 clean:
 	rm -f *.o
 

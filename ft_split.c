@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 00:06:02 by coder             #+#    #+#             */
-/*   Updated: 2022/09/15 01:10:03 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/15 23:47:20 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -29,7 +29,7 @@ static size_t	get_words(char const *s, char c)
 			j = 0;
 		s++;
 	}
-	return (i);
+	return (words);
 }
 
 static size_t	special_strlen(char const *s, char c)

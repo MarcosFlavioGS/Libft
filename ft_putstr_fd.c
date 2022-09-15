@@ -6,15 +6,15 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 21:13:57 by coder             #+#    #+#             */
-/*   Updated: 2022/09/14 22:17:11 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/16 00:21:31 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_pustr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s || !fd)
 		return ;
 	while (*s)
-		write(fd, &s++, sizeof(char));
+		write(fd, s++, sizeof(char));
 }

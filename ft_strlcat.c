@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 02:00:45 by coder             #+#    #+#             */
-/*   Updated: 2022/09/08 00:10:54 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/16 00:40:37 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -33,6 +33,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dst_size)
 	}
 	else
 	{
-		return (s_len + d_len);
+		return (s_len + dst_size);
 	}
 }

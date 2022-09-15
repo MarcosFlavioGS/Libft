@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 20:25:35 by coder             #+#    #+#             */
-/*   Updated: 2022/09/14 22:09:10 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/15 23:51:00 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -59,9 +59,11 @@ char	*ft_itoa(int n)
 	str = (char *) malloc(sizeof(char) * (count + 1));
 	i = 0;
 	if (n < 0)
+	{
 		str[i] = '-';
 		i++;
 		n = n * -1;
+	}
 	while (n != 0)
 	{
 		str[i] = n % 10 + '0';
