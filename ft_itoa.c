@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 20:25:35 by coder             #+#    #+#             */
-/*   Updated: 2022/09/15 23:51:00 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/16 03:11:49 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -39,6 +39,8 @@ static int	mod_numlen(int num)
 	int	count;
 
 	count = 0;
+	if (num <= 0)
+		count++;
 	while (num != 0)
 	{
 		num = num / 10;
