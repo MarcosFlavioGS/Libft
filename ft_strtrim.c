@@ -6,25 +6,10 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 01:25:34 by coder             #+#    #+#             */
-/*   Updated: 2022/09/16 00:19:44 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/17 01:57:32 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-static int	is_space(char c, char const *set)
-{
-	int	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (set[i] != c)
-			i++;
-		else
-			return (0);
-	}
-	return (1);
-}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -32,23 +17,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	j;
 
+	dest = 0;
 	i = 0;
 	if (s1 && set)
 	{
-		while (is_space(s1[i], set) != 0 && s1[i])
+		while (ft_strchr(set, s1[i]) && s1[i])
 		{
 			i++;
 		}
 		j = ft_strlen(s1);
-		while (is_space(s1[j], set) != 0)
+		while (s1[j - 1] && ft_strchr(set, s1[j - 1]) && j > i)
 		{
 			j--;
 		}
 		dest = (char *) malloc(sizeof(char) * (j - i + 1));
-		if (!dest)
-			return (NULL);
-		ft_strlcpy(dest, &s1[i], (j - i + 1));
-		return (dest);
+		if (dest)
+			ft_strlcpy(dest, &s1[i], (j - i + 1));
 	}
-	return (NULL);
+	return (dest);
 }
