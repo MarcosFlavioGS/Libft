@@ -6,12 +6,12 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 20:25:35 by coder             #+#    #+#             */
-/*   Updated: 2022/09/17 03:33:16 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/20 00:40:45 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static void	ft_rev_swap(char *s, int len, int num)
+static void	ft_rev_swap(char *s, int len)
 {
 	int		i;
 	int		j;
@@ -74,6 +74,6 @@ char	*ft_itoa(int n)
 		n = n / 10;
 	}
 	str[i] = '\0';
-	ft_rev_swap(str, i, num);
+	ft_rev_swap(str, i);
 	return (str);
 }
