@@ -6,7 +6,7 @@
 #    By: coder <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/10 01:57:11 by coder             #+#    #+#              #
-#    Updated: 2022/09/16 00:26:58 by coder            ###   ########.fr        #
+#    Updated: 2022/09/20 00:46:38 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,7 +90,7 @@ $(NAME): $(OBJS)
 		   ar -rc $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
-		   gcc $(FLAGS) -c $(SRCS)
+		   cc $(FLAGS) -c $(SRCS)
 clean:
 	rm -f *.o
 

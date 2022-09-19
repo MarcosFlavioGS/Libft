@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 20:25:35 by coder             #+#    #+#             */
-/*   Updated: 2022/09/20 00:40:45 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/20 01:40:00 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -51,27 +51,26 @@ static int	mod_numlen(int num)
 
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		temp;
-	char	*str;
+	int			i;
+	long int	temp;
+	char		*str;
 
 	temp = n;
-	str = (char *) malloc(sizeof(char) * (mod_numlen(temp) + 1));
+	str = (char *) malloc(sizeof(char) * mod_numlen(n) + 1);
 	if (!str)
 		return (NULL);
 	i = 0;
-	if (n == 0)
+	if (temp == 0)
 		str[i++] = '0';
-	if (n < 0)
+	if (temp < 0)
 	{
-		str[i] = '-';
-		i++;
-		n = n * -1;
+		str[i++] = '-';
+		temp *= -1;
 	}
-	while (n > 0)
+	while (temp > 0)
 	{
-		str[i++] = n % 10 + '0';
-		n = n / 10;
+		str[i++] = temp % 10 + '0';
+		temp = temp / 10;
 	}
 	str[i] = '\0';
 	ft_rev_swap(str, i);
