@@ -24,12 +24,10 @@ static int	ft_isblank(char a)
 int	ft_atoi(const char *str)
 {
 	int	res;
-	int	i;
 	int	sign;
 
 	res = 0;
 	sign = 1;
-	i = 0;
 	while (ft_isblank(*str))
 		str++;
 	if (*str == '-' || *str == '+')
@@ -45,14 +43,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * res);
 }
-/*
-int	main(void)
-{
-	char str[] = "-2147483648";
-	int val;
-
-	val = ft_atoi(str);
-	printf("%d", val);
-	return (0);
-}
-*/
