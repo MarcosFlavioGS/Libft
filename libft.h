@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 22:24:25 by coder             #+#    #+#             */
-/*   Updated: 2022/09/21 22:39:18 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/21 23:36:28 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,10 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int argument);
 int		ft_toupper(int argument);
-t_list	*lstnew(void *content);
+//bonus
+t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 #endif
