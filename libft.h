@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 22:24:25 by coder             #+#    #+#             */
-/*   Updated: 2022/09/16 00:46:08 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/21 21:08:14 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 # define MAX_SIZE = 2147483647
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);

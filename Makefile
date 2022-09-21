@@ -6,7 +6,7 @@
 #    By: coder <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/10 01:57:11 by coder             #+#    #+#              #
-#    Updated: 2022/09/20 00:46:38 by coder            ###   ########.fr        #
+#    Updated: 2022/09/21 22:10:48 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,15 +82,30 @@ OBJS = ft_atoi.o       \
 	   ft_tolower.o    \
 	   ft_toupper.o
 
+BONUS = ft_lstadd.c       \
+		ft_lstadd_front.c \
+		ft_lstclear.c     \
+		ft_lstdelone.c    \
+		ft_lstiter.c      \
+		ft_lstlast.c      \
+		ft_ft_lstmap.c    \
+		ft_lstnew.c       \
+		ft_lstsize.c
+
+BONUS_OBJS = ${BONUS:.c=.o}
+
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		   ar -rc $(NAME) $(OBJS)
+		   	ar -rc $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
-		   cc $(FLAGS) -c $(SRCS)
+		   	cc $(FLAGS) -c $(SRCS)
+
+bonus:	${BONUS_OBJS} ${NAME}
+			ar -rc ${NAME} ${BONUS} ${BONUS_OBJS}
 clean:
 	rm -f *.o
 
