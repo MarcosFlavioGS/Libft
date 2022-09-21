@@ -6,7 +6,7 @@
 #    By: coder <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/10 01:57:11 by coder             #+#    #+#              #
-#    Updated: 2022/09/22 00:46:39 by coder            ###   ########.fr        #
+#    Updated: 2022/09/22 01:33:38 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,7 @@ BONUS = ft_lstnew.c		  \
 		ft_lstlast.c	  \
 		ft_lstadd_front.c \
 		ft_lstadd_back.c  \
-		ft_lstadd.c       \
+#		ft_lstadd.c       \
 		ft_lstclear.c     \
 		ft_lstdelone.c    \
 		ft_lstiter.c      \
@@ -100,13 +100,17 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		   	ar -rc $(NAME) $(OBJS)
+		   	ar -rcs $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
 		   	cc $(FLAGS) -c $(SRCS)
 
-bonus:	${BONUS_OBJS} ${NAME}
-			ar -rc ${NAME} ${BONUS} ${BONUS_OBJS}
+bonus:	${BONUS_OBJS} 
+
+${BONUS_OBJS}:
+	cc ${FLAGS} -c ${@:.o=.c}
+	ar -rcs ${NAME}  $@
+
 clean:
 	rm -f *.o
 
