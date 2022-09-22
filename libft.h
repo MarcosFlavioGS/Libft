@@ -6,13 +6,12 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 22:24:25 by coder             #+#    #+#             */
-/*   Updated: 2022/09/22 01:46:47 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/22 02:05:57 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define MAX_SIZE = 2147483647
 # include <stdlib.h>
 # include <unistd.h>
 
