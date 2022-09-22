@@ -6,7 +6,7 @@
 #    By: coder <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/10 01:57:11 by coder             #+#    #+#              #
-#    Updated: 2022/09/22 01:44:11 by coder            ###   ########.fr        #
+#    Updated: 2022/09/22 22:19:15 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,10 +88,9 @@ BONUS = ft_lstnew.c		  \
 		ft_lstadd_front.c \
 		ft_lstadd_back.c  \
 		ft_lstdelone.c	  \
-#		ft_lstadd.c       \
 		ft_lstclear.c     \
 		ft_lstiter.c      \
-		ft_ft_lstmap.c    \
+		ft_lstmap.c    
 
 BONUS_OBJS = ${BONUS:.c=.o}
 
