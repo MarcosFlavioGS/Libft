@@ -45,11 +45,9 @@ static size_t	special_strlen(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
-	size_t	j;
 	size_t	k;
 	char	**mrx;
 
-	j = 0;
 	k = 0;
 	i = get_words(s, c);
 	mrx = (char **) ft_calloc(i + 1, sizeof(char *));
