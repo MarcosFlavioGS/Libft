@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 20:25:35 by coder             #+#    #+#             */
-/*   Updated: 2022/09/20 01:40:00 by coder            ###   ########.fr       */
+/*   Created: 2022/09/27 00:11:35 by mflavio-          #+#    #+#             */
+/*   Updated: 2022/09/27 00:11:38 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static void	ft_rev_swap(char *s, int len)

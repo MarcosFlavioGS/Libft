@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 00:06:02 by coder             #+#    #+#             */
-/*   Updated: 2022/09/15 23:47:20 by coder            ###   ########.fr       */
+/*   Created: 2022/09/27 00:17:12 by mflavio-          #+#    #+#             */
+/*   Updated: 2022/09/27 00:17:14 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	get_words(char const *s, char c)
