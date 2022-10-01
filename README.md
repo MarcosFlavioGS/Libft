@@ -6,4 +6,4 @@
 <p align="center"><img src="https://github.com/MarcosFlavioGS/Libft/blob/master/libftm.png">
 <p align="center"> <strong>125/100</strong> ✅ 
 
-## Wha
+## What is Libft ?
