@@ -1,2 +1,4 @@
 # Libft
-## A C library containing recoded useful functions to use in the future
+##
+## A C static library containing recoded standard functions
+##
