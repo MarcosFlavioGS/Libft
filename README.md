@@ -13,7 +13,8 @@ The Libft is the first project at 42. It consists on making a C static library c
 The project is divided in three parts - Part I, Part II and Bonus.
 
 ## Part 1
-```txt
-In this first part, you must re-code a set of the libc functions, as defined in their man. Your functions will need to present the same prototype and behaviors as the originals. Your functions’ names must be prefixed by “ft_”. For instance strlen becomes ft_strlen.
-```
+  
+>In this first part, you must re-code a set of the libc functions, as defined in their man.
+>Your functions will need to present the same prototype and behaviors as the originals. Your functions’ names must be prefixed by “ft_”. For instance strlen becomes >ft_strlen.
+  
 <p align="center">• isalpha • isdigit • isalnum • isascii • isprint • strlen • memset • bzero • memcpy • memmove • strlcpy • strlcat • toupper • tolower • strchr • strrchr • strncmp • memchr • memcmp • strnstr • atoi • calloc • strdup</p>
