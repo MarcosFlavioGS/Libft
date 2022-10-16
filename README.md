@@ -18,3 +18,16 @@ The project is divided in three parts - Part I, Part II and Bonus.
 >Your functions will need to present the same prototype and behaviors as the originals. Your functions’ names must be prefixed by “ft_”. For instance strlen becomes >ft_strlen.
   
 <p align="center">• isalpha • isdigit • isalnum • isascii • isprint • strlen • memset • bzero • memcpy • memmove • strlcpy • strlcat • toupper • tolower • strchr • strrchr • strncmp • memchr • memcmp • strnstr • atoi • calloc • strdup</p>
+
+  ## Part 2
+  
+>In this second part, you must code a set of functions that are either not included in the libc, or included in a different form.
+>Some of these functions can be useful to write Part 1’s functions.
+
+<p align="center">• substr • strjoin • strtrim • split • itoa • strmapi • striteri • putchar_fd • putstr_fd • putendl_fd • putnbr_fd</p>
+  
+## Bonus
+
+>In this Bonus part, you must code a set of functions that are useful to manipulate lists.
+  
+<p align="center">• lstnew • lstadd_front • lstsize • lstlast • lstadd_back • lstdelone • lstclear • lstiter • lstmap</p>
