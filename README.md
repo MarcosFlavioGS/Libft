@@ -31,3 +31,9 @@ The project is divided in three parts - Part I, Part II and Bonus.
 >In this Bonus part, you must code a set of functions that are useful to manipulate lists.
   
 <p align="center">• lstnew • lstadd_front • lstsize • lstlast • lstadd_back • lstdelone • lstclear • lstiter • lstmap</p>
+
+# Requirements
+  
+This project must be done in accordance with the <a href="https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf" target="_blank">Norm</a>
+
+The norm is a set of programing rules to follow when writing code at 42.
