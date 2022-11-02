@@ -81,6 +81,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // GNL
 char    *get_next_line(int fd);
 // ft_printf
-int     ft_printf(char *placeholders, ...);
+int     ft_printf(const char *placeholders, ...);
 int	    ft_numlen(unsigned long int num);
 #endif
