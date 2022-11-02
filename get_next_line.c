@@ -122,11 +122,11 @@ char	*get_next_line(int fd)
 	if (read(fd, 0, 0) == -1)
 		return (NULL);
 	read_line(fd, &str[fd]);
-	if (!str[fd] || !gnl_strlen(str[fd]))
+	if (!str[fd] || !ft_strlen(str[fd]))
 		return (NULL);
 	line = get_line(str[fd]);
 	str[fd] = clean_s(str[fd]);
-	if (!line || !gnl_strlen(line))
+	if (!line || !ft_strlen(line))
 	{
 		free(line);
 		free(str[fd]);

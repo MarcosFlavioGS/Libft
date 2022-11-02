@@ -50,7 +50,7 @@ void	  *ft_memmove(void *dest, const void *src, size_t n);
 void	  *ft_memset(void *str, int c, size_t n);
 int	    ft_putchar_fd(char c, int fd);
 void	  ft_putendl_fd(char *s, int fd);
-int	    ft_putnbr_fd(int n, int fd);
+int	    ft_putnbr_fd(long n, int fd);
 int	    ft_putstr_fd(char *s, int fd);
 char	  **ft_split(char const *s, char c);
 char	  *ft_strchr(const char *s, int c);
@@ -79,7 +79,7 @@ void	  ft_lstclear(t_list **lst, void (*del)(void *));
 void	  ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // GNL
-char    get_next_line(int fd);
+char    *get_next_line(int fd);
 // ft_printf
 int     ft_printf(char *placeholders, ...);
 int	    ft_numlen(unsigned long int num);
