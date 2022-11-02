@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_numlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflavio- <mfghost69@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 00:16:53 by mflavio-          #+#    #+#             */
-/*   Updated: 2022/09/27 00:16:55 by mflavio-         ###   ########.fr       */
+/*   Created: 2022/10/18 05:22:44 by mflavio-          #+#    #+#             */
+/*   Updated: 2022/10/21 03:12:17 by mflavio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_putnbr_fd(long n, int fd)
+int	ft_numlen(unsigned long int num)
 {
-	char	num;
-	int		len;
+	int	count;
 
-	num = 0;
-	len = 0;
-	if (n >= 10)
+	count = 0;
+	if (num <= 0)
+		count++;
+	while (num != 0)
 	{
-		num = n % 10 + '0';
-		n /= 10;
-		len += ft_putnbr_fd(n, fd);
-		len += write(1, &num, 1);
+		num = num / 10;
+		count++;
 	}
-	else if (0 <= n && n <= 9)
-	{
-		n += '0';
-		len += write(1, &n, 1);
-	}
-	else if (n < 0)
-	{
-		n *= (-1);
-		len += write(1, "-", 1);
-		len += ft_putnbr_fd(n, fd);
-	}
-	return (len);
+	return (count);
 }

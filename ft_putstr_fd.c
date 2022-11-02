@@ -12,10 +12,20 @@
 
 #include <unistd.h>
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
-	if (!s || !fd)
-		return ;
+  int	i;
+
+	i = 0;
+	if (s == NULL || !fd)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (*s)
+	{
 		write(fd, s++, sizeof(char));
+		i++;
+	}
+	return (i);
 }
