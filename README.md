@@ -37,3 +37,7 @@ The project is divided in three parts - Part I, Part II and Bonus.
 This project must be done in accordance with the <a href="https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf" target="_blank">Norm</a>
 
 The norm is a set of programing rules to follow when writing code at 42.
+
+# Note
+
+In 42 we are encouraged to keep updating our libft with time, so new functions will be added in the future, like *get_next_line* and *ft_printf*
