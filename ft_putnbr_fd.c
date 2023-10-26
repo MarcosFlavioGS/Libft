@@ -24,17 +24,17 @@ int	ft_putnbr_fd(long n, int fd)
 		num = n % 10 + '0';
 		n /= 10;
 		len += ft_putnbr_fd(n, fd);
-		len += write(1, &num, 1);
+		len += write(n, &num, 1);
 	}
 	else if (0 <= n && n <= 9)
 	{
 		n += '0';
-		len += write(1, &n, 1);
+		len += write(n, &n, 1);
 	}
 	else if (n < 0)
 	{
 		n *= (-1);
-		len += write(1, "-", 1);
+		len += write(n, "-", 1);
 		len += ft_putnbr_fd(n, fd);
 	}
 	return (len);
